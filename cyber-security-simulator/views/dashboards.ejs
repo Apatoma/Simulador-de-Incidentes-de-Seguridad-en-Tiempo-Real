@@ -29,5 +29,11 @@
         <% } %>
     </main>
     <script src="/js/main.js"></script>
+<% if (user.role === 'hacker') { %>
+    <script src="/js/hacker.js"></script>
+<% } else if (user.role === 'defender') { %>
+    <script src="/js/defender.js"></script>
+<% } %>
+
 </body>
 </html>
