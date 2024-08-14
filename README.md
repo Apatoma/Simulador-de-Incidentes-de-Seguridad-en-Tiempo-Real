@@ -13,7 +13,7 @@ Installation
 
     bash
 
-git clone https://github.com/your-username/cyber-security-simulator.git
+git clone https://github.com/Apatoma/Simulador-de-Incidentes-de-Seguridad-en-Tiempo-Real.git
 cd cyber-security-simulator
 
 Install dependencies
