@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Control de Ciberseguridad</h1>
+    </header>
+    <main>
+        <div id="user-info">
+            <p>Bienvenido, <%= user.username %> (<%= user.role %>)</p>
+        </div>
+        <div id="incidents">
+            <h2>Incidentes Actuales</h2>
+            <ul>
+                <% incidents.forEach(incident => { %>
+                    <li><%= incident.type %> - <%= incident.status %></li>
+                <% }) %>
+            </ul>
+        </div>
+        <% if (user.role === 'hacker') { %>
+            <button id="launch-attack">Lanzar Ataque</button>
+        <% } else { %>
+            <button id="deploy-defense">Desplegar Defensa</button>
+        <% } %>
+    </main>
+    <script src="/js/main.js"></script>
+</body>
+</html>
