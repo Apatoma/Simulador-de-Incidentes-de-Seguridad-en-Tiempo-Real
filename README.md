@@ -1,120 +1,86 @@
-Real-Time Security Incident Simulator 🚀
-Description
+# Real-Time Security Incident Simulator 🚀
 
-This is a real-time cybersecurity simulator where users can play as "hackers" or "defenders." Defenders must identify, contain, and mitigate attacks while hackers attempt to breach simulated systems.
-Requirements
+## Description
 
-    Node.js (version 14.x or higher)
-    MongoDB (installed and running)
+The **Real-Time Security Incident Simulator** is a dynamic cybersecurity simulation platform where users can play as either "hackers" or "defenders." Defenders must identify, contain, and mitigate attacks, while hackers attempt to breach simulated systems. This interactive tool provides a hands-on approach to understanding real-time cybersecurity challenges.
 
-Installation
+## Features
 
-    Clone the repository
+- **Hackers**: Launch attacks like SQL Injection, DDoS, and more. Attacks are displayed in real-time on the dashboard of all users. 💻⚠️
+- **Defenders**: Deploy defenses such as firewalls, IDS/IPS, etc. Defenses are shown in real-time on the dashboard of all users. 🛡️✅
+- **Interactive Dashboard**: Monitor attacks and defenses in real-time.
 
-    bash
+## Installation
 
-git clone https://github.com/Apatoma/Simulador-de-Incidentes-de-Seguridad-en-Tiempo-Real.git
-cd cyber-security-simulator
+To set up the project locally:
 
-Install dependencies
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/Apatoma/Simulador-de-Incidentes-de-Seguridad-en-Tiempo-Real.git
+    cd Simulador-de-Incidentes-de-Seguridad-en-Tiempo-Real
+    ```
 
-Ensure you are in the project folder and run:
+2. **Install dependencies**:
+    Ensure you are in the project folder and run:
+    ```bash
+    npm install
+    ```
 
-bash
+3. **Configure environment variables**:
+    Create a `.env` file in the root of the project with the following content:
+    ```env
+    DB_URL=mongodb://localhost:27017/cyber-security-simulator
+    SESSION_SECRET=your_secret_key_here
+    PORT=3000
+    ```
+    - `DB_URL`: Connection URL for your MongoDB database.
+    - `SESSION_SECRET`: Secret key for session management.
+    - `PORT`: Port for running the application (default is 3000).
 
-npm install
-
-Configure environment variables
-
-Create a .env file in the root of the project with the following content:
-
-env
-
-DB_URL=mongodb://localhost:27017/cyber-security-simulator
-SESSION_SECRET=your_secret_key_here
-PORT=3000
-
-    DB_URL: Connection URL for your MongoDB database.
-    SESSION_SECRET: Secret key for session management.
-    PORT: Port for running the application (default is 3000).
-
-Start the server
-
-Run the following command to start the server:
-
-bash
-
+4. **Start the server**:
+    Run the following command to start the server:
+    ```bash
     npm start
+    ```
+    The server will start at [http://localhost:3000](http://localhost:3000).
 
-    The server will start at http://localhost:3000.
+## Usage
 
-Usage
+- **Access the Application**: Open your web browser and go to [http://localhost:3000](http://localhost:3000). 🌐
+- **Register a New User**:
+  - Navigate to [http://localhost:3000/auth/register](http://localhost:3000/auth/register) to register a new user.
+  - Choose a username, a password, and select a role (Hacker or Defender).
+- **Log In**:
+  - Go to [http://localhost:3000/auth/login](http://localhost:3000/auth/login) to log in with the username and password you chose during registration.
+- **Access the Dashboard**:
+  - After logging in, you will be redirected to the dashboard at [http://localhost:3000/dashboard](http://localhost:3000/dashboard).
+  - Depending on your role, you will be able to launch attacks (if you're a hacker) or deploy defenses (if you're a defender).
 
-    Access the Application
+To experience the application online, visit: [Real-Time Security Incident Simulator](http://localhost:3000).
 
-    Open your web browser and go to http://localhost:3000. 🌐
+## Contributing
 
-    Register a New User
-        Navigate to http://localhost:3000/auth/register to register a new user.
-        Choose a username, a password, and select a role (Hacker or Defender).
+Contributions are welcome! To contribute:
 
-    Log In
-        Go to http://localhost:3000/auth/login to log in with the username and password you chose during registration.
+1. **Fork the repository**.
+2. **Create a new branch**:
+    ```bash
+    git checkout -b feature-new-feature
+    ```
+3. **Make your changes and commit them**:
+    ```bash
+    git commit -am 'Add new feature'
+    ```
+4. **Push your changes**:
+    ```bash
+    git push origin feature-new-feature
+    ```
+5. **Create a Pull Request**.
 
-    Access the Dashboard
-        After logging in, you will be redirected to the dashboard at http://localhost:3000/dashboard.
-        Depending on your role, you will be able to launch attacks (if you're a hacker) or deploy defenses (if you're a defender).
+## License
 
-Features
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details. 📜
 
-    Hackers: Can launch attacks like SQL Injection, DDoS, etc. Attacks are displayed in real-time on the dashboard of all users. 💻⚠️
-    Defenders: Can deploy defenses like firewalls, IDS/IPS, etc. Defenses are shown in real-time on the dashboard of all users. 🛡️✅
+---
 
-Project Structure
-
-arduino
-
-cyber-security-simulator/
-├── public/
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   ├── main.js
-│   │   ├── hacker.js
-│   │   └── defender.js
-│   └── images/
-├── views/
-│   ├── index.ejs
-│   ├── login.ejs
-│   ├── register.ejs
-│   └── dashboard.ejs
-├── models/
-│   ├── user.js
-│   ├── incident.js
-│   └── score.js
-├── routes/
-│   ├── index.js
-│   ├── auth.js
-│   └── dashboard.js
-├── controllers/
-│   ├── authController.js
-│   └── incidentController.js
-├── app.js
-├── package.json
-└── .env
-
-Contributing
-
-If you want to contribute to the project, please follow these steps:
-
-    Fork the repository.
-    Create a new branch (git checkout -b feature-new-feature).
-    Make your changes and commit them (git commit -am 'Add new feature').
-    Push your changes (git push origin feature-new-feature).
-    Create a Pull Request.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details. 📜
-
-Feel free to tweak any sections according to your needs. Good luck with your cybersecurity simulator! If you need further assistance, just let me know. 😊
+Made with ❤️ by [Alejandro](https://github.com/Apatoma)
